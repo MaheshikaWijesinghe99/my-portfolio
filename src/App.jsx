@@ -113,6 +113,12 @@ function App() {
 
                         <p>AI powered research helping platform.</p>
                     </div>
+
+                    <div className="project-card">
+                        <h3>Other</h3>
+
+                        <p>Having more projects.</p>
+                    </div>
                 </div>
             </section>
 
