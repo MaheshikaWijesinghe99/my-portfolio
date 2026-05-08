@@ -2,46 +2,108 @@ import './App.css';
 
 function App() {
     return (
-        <div className="container">
-            <header className="hero">
-                <h1>Hi, I'm Maheshika Wijesinghe</h1>
+        <div>
+            {/* NAVBAR */}
 
-                <p>B.Sc Honours in Computing and Information Systems</p>
+            <nav className="navbar">
+                <h2 className="logo">MyPortfolio</h2>
 
-                <button>Download CV</button>
+                <ul className="nav-links">
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+
+                    <li>
+                        <a href="#skills">Skills</a>
+                    </li>
+
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            {/* HERO SECTION */}
+
+            <header id="home" className="hero">
+                <div className="hero-content">
+                    <h1>Hi, I'm Maheshika Wijesinghe</h1>
+
+                    <p>B.Sc Honours in Computing and Information Systems</p>
+
+                    <button>Hire Me</button>
+                </div>
             </header>
 
-            <section className="about">
+            {/* ABOUT */}
+
+            <section id="about" className="section">
                 <h2>About Me</h2>
 
-                <p>I am passionate about web development and modern technologies.</p>
+                <p>
+                    I am passionate about web development and modern technologies. I enjoy creating responsive and
+                    user-friendly applications.
+                </p>
             </section>
 
-            <section className="skills">
+            {/* SKILLS */}
+
+            <section id="skills" className="section">
                 <h2>Skills</h2>
 
-                <div className="skill-list">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>React</span>
+                <div className="skills-container">
+                    <div className="skill-card">HTML</div>
+
+                    <div className="skill-card">CSS</div>
+
+                    <div className="skill-card">JavaScript</div>
+
+                    <div className="skill-card">React</div>
+
+                    <div className="skill-card">GitHub</div>
                 </div>
             </section>
 
-            <section className="projects">
+            {/* PROJECTS */}
+
+            <section id="projects" className="section">
                 <h2>Projects</h2>
 
-                <div className="project-card">
-                    <h3>Portfolio Website</h3>
+                <div className="project-container">
+                    <div className="project-card">
+                        <h3>Portfolio Website</h3>
 
-                    <p>Personal portfolio website built using React.</p>
+                        <p>Responsive portfolio website built using React.</p>
+                    </div>
+
+                    <div className="project-card">
+                        <h3>Student Management System</h3>
+
+                        <p>Modern CRUD application for student data handling.</p>
+                    </div>
+
+                    <div className="project-card">
+                        <h3>AI Research Assistant</h3>
+
+                        <p>AI-based research helping application.</p>
+                    </div>
                 </div>
             </section>
 
-            <section className="contact">
+            {/* CONTACT */}
+
+            <section id="contact" className="section">
                 <h2>Contact</h2>
 
-                <p>Email: example@gmail.com</p>
+                <p>Email: maheshikajeewanthi99@gmail.com</p>
             </section>
         </div>
     );
