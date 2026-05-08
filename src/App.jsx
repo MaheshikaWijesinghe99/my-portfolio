@@ -1,5 +1,7 @@
 import './App.css';
 
+import { TypeAnimation } from 'react-type-animation';
+
 function App() {
     return (
         <div>
@@ -31,15 +33,29 @@ function App() {
                 </ul>
             </nav>
 
-            {/* HERO SECTION */}
+            {/* HERO */}
 
             <header id="home" className="hero">
                 <div className="hero-content">
                     <h1>Hi, I'm Maheshika Wijesinghe</h1>
 
+                    <TypeAnimation
+                        sequence={['Frontend Developer', 2000, 'React Developer', 2000, 'Web Designer', 2000]}
+                        wrapper="span"
+                        speed={50}
+                        repeat={Infinity}
+                        className="typing"
+                    />
+
                     <p>B.Sc Honours in Computing and Information Systems</p>
 
-                    <button>Hire Me</button>
+                    <div className="hero-buttons">
+                        <a href="/cv.pdf" download>
+                            <button>Download CV</button>
+                        </a>
+
+                        <button className="contact-btn">Contact Me</button>
+                    </div>
                 </div>
             </header>
 
@@ -49,8 +65,8 @@ function App() {
                 <h2>About Me</h2>
 
                 <p>
-                    I am passionate about web development and modern technologies. I enjoy creating responsive and
-                    user-friendly applications.
+                    I am passionate about creating modern web applications and continuously improving my development
+                    skills.
                 </p>
             </section>
 
@@ -69,6 +85,8 @@ function App() {
                     <div className="skill-card">React</div>
 
                     <div className="skill-card">GitHub</div>
+
+                    <div className="skill-card">Responsive Design</div>
                 </div>
             </section>
 
@@ -81,19 +99,19 @@ function App() {
                     <div className="project-card">
                         <h3>Portfolio Website</h3>
 
-                        <p>Responsive portfolio website built using React.</p>
+                        <p>Responsive portfolio website using React.</p>
                     </div>
 
                     <div className="project-card">
                         <h3>Student Management System</h3>
 
-                        <p>Modern CRUD application for student data handling.</p>
+                        <p>Full CRUD application with modern UI.</p>
                     </div>
 
                     <div className="project-card">
                         <h3>AI Research Assistant</h3>
 
-                        <p>AI-based research helping application.</p>
+                        <p>AI powered research helping platform.</p>
                     </div>
                 </div>
             </section>
@@ -105,6 +123,12 @@ function App() {
 
                 <p>Email: maheshikajeewanthi99@gmail.com</p>
             </section>
+
+            {/* FOOTER */}
+
+            <footer className="footer">
+                <p>© 2026 Maheshika Wijesinghe | All Rights Reserved</p>
+            </footer>
         </div>
     );
 }
