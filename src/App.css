@@ -217,3 +217,35 @@ button:hover {
     color: #94a3b8;
     margin-top: 50px;
 }
+
+/* HAMBURGER */
+
+.hamburger {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* MOBILE MENU */
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background: #0f172a;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}

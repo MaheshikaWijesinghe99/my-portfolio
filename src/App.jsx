@@ -1,8 +1,11 @@
 import './App.css';
+import { useState } from 'react';
 
 import { TypeAnimation } from 'react-type-animation';
 
 function App() {
+    const [menuOpen, setMenuOpen] = useState(false);
+
     return (
         <div>
             {/* NAVBAR */}
@@ -10,7 +13,11 @@ function App() {
             <nav className="navbar">
                 <h2 className="logo">MyPortfolio</h2>
 
-                <ul className="nav-links">
+                <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+                    ☰
+                </div>
+
+                <ul className={menuOpen ? 'nav-links active' : 'nav-links'}>
                     <li>
                         <a href="#home">Home</a>
                     </li>
@@ -64,10 +71,7 @@ function App() {
             <section id="about" className="section">
                 <h2>About Me</h2>
 
-                <p>
-                    I am passionate about creating modern web applications and continuously improving my development
-                    skills.
-                </p>
+                <p>Passionate about creating modern web applications and continuously improving development skills.</p>
             </section>
 
             {/* SKILLS */}
@@ -99,25 +103,19 @@ function App() {
                     <div className="project-card">
                         <h3>Portfolio Website</h3>
 
-                        <p>Responsive portfolio website using React.</p>
+                        <p>Modern responsive portfolio website using React.</p>
                     </div>
 
                     <div className="project-card">
                         <h3>Student Management System</h3>
 
-                        <p>Full CRUD application with modern UI.</p>
+                        <p>React based CRUD application.</p>
                     </div>
 
                     <div className="project-card">
                         <h3>AI Research Assistant</h3>
 
-                        <p>AI powered research helping platform.</p>
-                    </div>
-
-                    <div className="project-card">
-                        <h3>Other</h3>
-
-                        <p>Having more projects.</p>
+                        <p>AI powered research helper application.</p>
                     </div>
                 </div>
             </section>
